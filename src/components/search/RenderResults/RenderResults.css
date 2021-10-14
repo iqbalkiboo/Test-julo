@@ -1,0 +1,8 @@
+.renderResult {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.detailsContainer {
+  border: 2px inset #fff;
+}

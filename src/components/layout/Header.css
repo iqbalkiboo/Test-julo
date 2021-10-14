@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
+header {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  max-height: 10vh;
+  padding: 1rem 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -15px 30px -5px #c986d7;
+  background: linear-gradient(90deg, rgba(70, 68, 68, 0) 0%, rgba(255, 255, 255, 0.048) 25%, rgba(255, 255, 255, 0.068) 75%, rgba(255, 255, 255, 0) 100%);
+  animation: shine 20s infinite;
+}
+
+.logo {
+  font-family: 'Monoton', cursive;
+  background: radial-gradient(circle at 50% 120%, #d481f6, #cb76ef 10%, #9936d6 80%, #b12dda 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(150%);
+  text-shadow: #17171a 1px 1px 0;
+}
+
+.logging {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.loggingLi {
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+.logBtn {
+  background-color: transparent;
+  cursor: pointer;
+  color: rgb(12, 122, 71);
+  font-size: 1rem;
+  filter: brightness(150%);
+}
+
+.account {
+  color: rgb(223, 217, 224);
+}
+
+.navUl li {
+  padding: 0 0.5rem;
+}
+
+.navUl li:hover {
+  filter: brightness(50%);
+  text-shadow: 2px 2px 4px #000;
+}
+
+.logBtn:hover {
+  filter: brightness(110%);
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 -15px 30px -5px #c986d7;
+  }
+
+  40% {
+    box-shadow: 0 -5px 55px -1px #c986d7;
+  }
+
+  75% {
+    box-shadow: 0 5px 55px -1px #c986d7;
+  }
+
+  100% {
+    box-shadow: 0 -15px 30px -5px #c986d7;
+  }
+}
+
+@media(min-width: 768px) {
+  header h4 {
+    font-size: 1.5rem;
+  }
+}

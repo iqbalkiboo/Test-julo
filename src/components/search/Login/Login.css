@@ -1,0 +1,148 @@
+.loginWrapper {
+  max-height: 100vh;
+  border: 2px inset rgb(172, 169, 169);
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background-color: #333;
+  z-index: 3;
+  overflow: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.801);
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+
+.login,
+.login-form {
+  flex-direction: column;
+}
+
+.formHeading,
+.signUpQuestion,
+.formInput,
+.submitLogin,
+.submitSignup,
+.errorContainer {
+  margin-bottom: 1.2rem;
+}
+
+input[type="password"] {
+  margin-bottom: 0;
+}
+
+.formSpan {
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  width: 200px;
+}
+
+label {
+  align-self: flex-start;
+  margin-bottom: 0.3rem;
+}
+
+.formInput,
+.submitLogin,
+.submitSignup,
+.errorContainer {
+  padding: 0.5rem;
+  width: 240px;
+}
+
+.submitLogin,
+.submitSignup {
+  cursor: pointer;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.registerBtn {
+  background: transparent;
+  text-decoration: underline;
+  font-size: 1rem;
+  color: rgb(7, 246, 250);
+  filter: brightness(200%);
+  cursor: pointer;
+  padding: 0 0.7rem;
+}
+
+.submitLogin {
+  background-color: rgb(27, 170, 202);
+  background-image: linear-gradient(180deg, rgb(24, 146, 173) 0%, #2127ff 100%);
+}
+
+.submitSignup {
+  background-color: #ff3cef;
+  background-image: linear-gradient(180deg, #ff3cef 0%, #bc2baf 50%, #c52bb3 100%);
+}
+
+.loginX {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  margin: 0.2rem 0.3rem;
+  cursor: pointer;
+}
+
+.errorContainer {
+  height: 30px;
+  align-self: center;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media(min-width: 500px) {
+  .login {
+    width: 400px;
+  }
+
+  .formInput,
+  .submitLogin,
+  .submitSignup,
+  .errorContainer {
+    width: 300px;
+  }
+}
+
+@media(min-width: 768px) {
+  .login {
+    width: 400px;
+    height: 500px;
+    justify-content: space-evenly;
+  }
+
+  .login-form {
+    height: 60%;
+    justify-content: space-around;
+  }
+
+  label {
+    margin: 0;
+  }
+
+  .loginX {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+  }
+
+  .loginX:hover,
+  .registerBtn:hover {
+    filter: brightness(50%);
+    transition: ease-in-out;
+  }
+}

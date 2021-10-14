@@ -1,0 +1,50 @@
+.search h1 {
+  font-size: 1rem;
+}
+
+.search h3 {
+  font-size: 0.7rem;
+}
+
+.searchForm {
+  width: 100%;
+  height: 100%;
+}
+
+.searchArea {
+  transition: width 0.5s ease-in-out;
+  width: 200px;
+  padding: 0.6rem;
+  background: lightgray;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.btnSearch {
+  margin: 0 auto;
+  color: rgb(82, 33, 83);
+  background: linear-gradient(to bottom, #e2cff3fb 5%, #c6a3e2f1 100%);
+  outline: 2px solid rgb(82, 33, 83);
+}
+
+.btnSearch:hover {
+  color: #fff;
+  background: linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+  outline: none;
+}
+
+@media(min-width: 500px) {
+  .searchArea:focus {
+    width: 400px;
+  }
+}
+
+@media(min-width: 768px) {
+  .search h1 {
+    font-size: 1.5rem;
+  }
+
+  .search h3 {
+    font-size: 1rem;
+  }
+}

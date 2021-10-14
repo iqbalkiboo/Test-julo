@@ -1,0 +1,122 @@
+.SingleMovieBox {
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.movieBox {
+  background: radial-gradient(circle at top left, rgba(66, 65, 63, 0.833), rgba(26, 23, 20, 0.675));
+  ;
+  border: 2px inset white;
+  box-shadow: 2px 2px 2px white;
+}
+
+.btnDetailsWrapper {
+  height: 50px;
+  padding: 1rem 0;
+  cursor: pointer;
+  grid-area: btnDetails;
+  background: linear-gradient(90deg, #ae96c73f 0%, #7bc7c352 25%, #80addc4f 50%, #a27ec744 75%, #b277a54b 100%);
+  text-shadow: 2px 2px 4px #000;
+  mask-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, #fff 25%, #fff 75%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, #fff 25%, #fff 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+@supports (-ms-ime-align:auto) {
+  .btnDetailsWrapper {
+    background: rgba(201, 135, 218, 0.445);
+    filter: brightness(80%);
+  }
+}
+
+.arrow {
+  color: rgba(214, 212, 206, 0.966);
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  animation: rotate 5s infinite;
+}
+
+.movieBox {
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 30px;
+  grid-template-areas:
+    'smallImage movieInfo'
+    'smallImage movieInfo'
+    'smallImage movieInfo'
+    'smallImage movieInfo'
+    'btnDetails btnDetails'
+  ;
+  min-height: 200px;
+}
+
+.smallImage {
+  height: 100px;
+  max-width: 100%;
+  grid-area: smallImage;
+}
+
+.movieInfo {
+  grid-area: movieInfo;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 2px inset #fff;
+  text-align: left;
+}
+
+.movieTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.movieYear,
+.movieType {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@media(min-width: 400px) {
+  .movieTitle {
+    font-size: 1.3rem;
+  }
+
+  .movieYear,
+  .movieType {
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 600px) {
+  .movieBox {
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 30px;
+    grid-template-areas:
+      'smallImage movieInfo'
+      'smallImage movieInfo'
+      'btnDetails btnDetails'
+    ;
+    max-height: 200px;
+  }
+
+  .smallImage {
+    height: 120px;
+    grid-area: smallImage;
+    margin: 0 auto;
+  }
+
+  .movieInfo {
+    justify-content: flex-start;
+  }
+
+  .btnDetailsWrapper:hover {
+    filter: brightness(50%);
+  }
+}

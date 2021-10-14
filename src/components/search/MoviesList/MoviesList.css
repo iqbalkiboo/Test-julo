@@ -1,0 +1,174 @@
+.watchlist {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.listContainer {
+  width: 95vw;
+  background: radial-gradient(circle at top left, rgba(66, 65, 63, 0.833), rgba(26, 23, 20, 0.675));
+  box-shadow: 3px 3px 6px rgba(150, 151, 152, 0.47);
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.buttons,
+.list,
+.imdbWrapper,
+.titlesWrapper,
+.favWrapper {
+  flex-direction: column;
+  padding: 0.8rem;
+}
+
+.imdbWrapper,
+.titlesWrapper,
+.favWrapper {
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.btnSort {
+  background: linear-gradient(to bottom, rgb(120, 119, 128) 0%, rgb(59, 58, 68) 0%, rgb(130, 135, 161) 0%, rgb(65, 62, 66) 49%, rgb(62, 59, 63) 50%, rgb(140, 140, 156) 100%);
+  color: white;
+  margin: 1em auto;
+  width: 155px;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  display: block;
+  margin: 1em auto;
+  cursor: pointer;
+}
+
+.listItem {
+  width: 95%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 10px 40px 10px 40px;
+  margin: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1.5fr, 1fr, 1fr, 1fr;
+  grid-template-areas:
+    '. listImage .'
+    'titlesWrapper titlesWrapper titlesWrapper'
+    'imdbWrapper imdbWrapper imdbWrapper'
+    'favWrapper favWrapper favWrapper';
+  background: linear-gradient(to top, rgba(76, 76, 76, 1) 0%, rgba(102, 102, 102, 1) 0%, rgba(102, 102, 102, 1) 0%, rgba(89, 89, 89, 0.97) 12%, rgba(17, 17, 17, 0.86) 54%, rgba(43, 43, 43, 0.8) 76%, rgba(44, 44, 44, 0.79) 82%, rgba(28, 28, 28, 0.76) 91%, rgba(19, 19, 19, 0.74) 100%);
+  background: -webkit-linear-gradient(to top, rgba(76, 76, 76, 1) 0%, rgba(102, 102, 102, 1) 0%, rgba(102, 102, 102, 1) 0%, rgba(89, 89, 89, 0.97) 12%, rgba(17, 17, 17, 0.86) 54%, rgba(43, 43, 43, 0.8) 76%, rgba(44, 44, 44, 0.79) 82%, rgba(28, 28, 28, 0.76) 91%, rgba(19, 19, 19, 0.74) 100%);
+  background: -moz-linear-gradient(to top, rgba(76, 76, 76, 1) 0%, rgba(102, 102, 102, 1) 0%, rgba(102, 102, 102, 1) 0%, rgba(89, 89, 89, 0.97) 12%, rgba(17, 17, 17, 0.86) 54%, rgba(43, 43, 43, 0.8) 76%, rgba(44, 44, 44, 0.79) 82%, rgba(28, 28, 28, 0.76) 91%, rgba(19, 19, 19, 0.74) 100%);
+}
+
+.titlesWrapper {
+  grid-area: titlesWrapper;
+}
+
+.listImage {
+  height: 100px;
+  grid-area: listImage;
+  margin: 0.7rem auto;
+}
+
+.imdbWrapper {
+  grid-area: imdbWrapper;
+
+}
+
+.favWrapper {
+  grid-area: favWrapper;
+}
+
+.addFav,
+.imdbLink,
+.delete,
+.hash {
+  cursor: pointer;
+}
+
+.imdbLink {
+  color: rgba(200, 255, 0, 0.89);
+  text-decoration: underline;
+}
+
+.btnList {
+  color: whitesmoke;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  width: 120px;
+}
+
+.addFav {
+  border: 1px solid rgb(21, 201, 15);
+  background: linear-gradient(to bottom, rgba(43, 181, 142, 0.836) 0%, rgba(7, 84, 57, 0.808) 52%, rgba(8, 86, 61, 0.808) 54%, rgba(13, 105, 67, 0.836) 70%, rgba(43, 181, 133, 0.849) 100%);
+}
+
+.star {
+  color: rgb(72, 73, 66);
+  font-size: 1.7rem;
+  padding: 0.4rem;
+}
+
+.yellow {
+  color: rgb(239, 243, 8);
+}
+
+.delete {
+  background: linear-gradient(to bottom, rgba(181, 43, 43, 0.774) 0%, rgba(84, 12, 7, 0.829) 52%, rgba(86, 17, 8, 0.801) 54%, rgba(105, 19, 13, 0.801) 70%, rgba(181, 43, 43, 0.788) 100%);
+  margin-top: 1.7rem;
+}
+
+@media(min-width: 600px) {
+  .buttons {
+    flex-direction: row;
+  }
+
+  .listItem {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'listImage titlesWrapper imdbWrapper favWrapper';
+  }
+
+  .imdbWrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hash {
+    padding: 0.5rem;
+    border: 1px solid rgba(155, 243, 243, 0.925);
+  }
+}
+
+@media(min-width: 768px) {
+
+  .btnSort:hover,
+  .addFav:hover,
+  .delete:hover {
+    box-shadow: 2px 2px 6px rgba(150, 151, 152, 0.47);
+    transition: 0.5s;
+  }
+
+  .imdbLink:hover {
+    filter: brightness(40%);
+  }
+}
+
+@media(min-width: 992px) {
+  .listImage {
+    height: 120px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .watchlist {
+    font-size: 110%;
+  }
+
+  .listContainer {
+    max-width: 1100px;
+  }
+}
